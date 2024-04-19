@@ -20,7 +20,7 @@ function find() { // EXERCISE A
  return db('schemes as sc')
  .leftJoin('steps as st', 'sc.scheme_id', 'st.scheme_id')
  .select('sc.*')
- .count('sc.step_id as number_of_steps')
+ .count('st.step_id as number_of_steps')
  .groupBy('sc.scheme_id')
 }
 
